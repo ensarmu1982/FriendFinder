@@ -23,15 +23,17 @@ module.exports = function(app) {
   // A POST routes `/api/friends`. This will be used to handle incoming survey results. 
   // This route will also be used to handle the compatibility logic. 
   app.post("/api/friends", function(req, res) {
-    
     //compare the values as well
-    console.log("Data to compare with: ");
-    console.log(friendData);
+    var difference = 0;
+    var totalDifference = 0;
 
-    console.log("New Friend Data: ");
-    console.log(req.body);
+    console.log("Best Friend: ");
+    for(var i=0; i<9; i++){
+      difference =Math.abs(parseInt(friendData[0].scores[i]) - parseInt(req.body.scores[i]));
+      totalDifference = difference + totalDifference;
+      console.log("Difference: "+ difference);
+      console.log("Total Difference: "+ totalDifference);
 
-    var friendData1 = friendData;
-    var friendData2 = req.body;
+    }
   });
 };
