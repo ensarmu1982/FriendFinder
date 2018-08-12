@@ -19,4 +19,5 @@ In this activity, you'll build a compatibility-based "FriendFinder" application 
 
 7. Once you've found the current user's most compatible friend, display the result as a modal pop-up.
    * The modal should display both the name and picture of the closest match.
-# FriendFinder
+
+I was able to view the console.log but I did not get a chance to finish the comparison.
