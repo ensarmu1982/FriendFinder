@@ -30,8 +30,7 @@ module.exports = function(app) {
     for(var i = 0; i < 9; i++){
       difference =Math.abs(parseInt(friendData[0].scores[i]) - parseInt(req.body.scores[i]));
       totalDifference = difference + totalDifference;
-      console.log("Difference: "+ difference);
-      console.log("Total Difference: "+ totalDifference);
     }
+    console.log("Total Difference: "+ totalDifference);
   });
 }
