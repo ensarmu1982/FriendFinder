@@ -239,9 +239,9 @@
         ],
       };
 
-      $.post("/api/friends", newFriend, function(data) {
-
-        //push values to the friends.js
+      $.post("/api/friends", function(newFriend) {
+            //push values to the friends.js
+            friendData.push(req.body);
         }); 
     });
 
